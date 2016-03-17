@@ -1,9 +1,19 @@
 defmodule DataLeafWalker do
   
   def map( hash, fn_transform ) when is_map( hash ) do
-    Enum.into hash, %{}, fn { key, value } -> 
-      { key, transform( value, fn_transform ) }
-    end
+		List.foldl(
+			Map.keys( hash ),
+			%{},
+			fn key, acc ->
+        old_value = Map.fetch! hash, key 
+				new_value = case key do
+		      # don not touch __struct__ values as they define the struct type
+					:__struct__ -> old_value 
+					_           -> transform old_value, fn_transform
+				end
+				Map.put_new acc, key, new_value 
+			end
+		)
   end
 
   def map( list, fn_transform ) when is_list( list ) do
