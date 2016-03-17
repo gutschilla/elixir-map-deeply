@@ -13,11 +13,11 @@ DeeplyEnumerable.map_deeply( data, fn( value ) -> ...transform value... end )
 Where data can ba a map, list or keyword list. 
 
 ```
-data = [1, 2, 3, {:a, 2}, {:b, 4}, %{ a: 2 } ]
+data = [1, 2, 3, [{:a, 2}, {:b, 4}], %{ a: 2 } ]
 DeeplyEnumerable.map_deeply map, &( &1 + 1 )
 
 # yields
-[2, 3, [a: 4, b: 5], %{c: 6, d: ['e']}]
+[2, 3, 4,[a: 3, b: 5], %{a: 3}]
 
 ```
 
@@ -29,7 +29,7 @@ maps into maps of the same structure with all values decoded into proper UTF-8.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+The package can be installed as:
 
   1. Add data_leaf_walker to your list of dependencies in `mix.exs`:
 
@@ -37,3 +37,8 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
           [{:data_leaf_walker, "~> 0.0.1"}]
         end
 
+## Todo
+
+[ ] Make keys subject to mappability, too.
+[ ] Support structs.
+[ ] proper docs
