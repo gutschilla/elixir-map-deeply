@@ -1,7 +1,9 @@
-# DeeplyEnumerble and DataLeafWalker
+# DeeplyEnumerable and DataLeafWalker
 
 Traverse and map values of deeply nested data structures: Provides a
 `map_deeply/2` function for Maps and Lists and Keyword Lists. 
+
+rroouugghhllyy based on ideas from Perl's Data::Leaf::Walker
 
 
 ## Usage
@@ -39,6 +41,7 @@ The package can be installed as:
 
 ## Todo
 
-[ ] Make keys subject to mappability, too.
-[ ] Support structs.
-[ ] proper docs
+- [ ] Make keys subject to mappability, too.
+- [ ] Support structs.
+- [ ] add proper docs
+- [ ] really a protocol?
