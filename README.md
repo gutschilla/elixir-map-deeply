@@ -7,7 +7,7 @@ rroouugghhllyy based on ideas from Perl's Data::Leaf::Walker
 
 ## Synopsis
 
-```
+```elxir
 data = [1, 2, 3, [{:a, 2}, {:b, 4}], %{ a: 2 } ]
 DeeplyEnumerable.map_deeply map, &( &1 + 1 )
 
@@ -17,7 +17,7 @@ DeeplyEnumerable.map_deeply map, &( &1 + 1 )
 
 ## Usage
 
-```
+```elxir
 DeeplyEnumerable.map_deeply( data, fn( value ) -> ...transform value... end )
 ```
 
@@ -27,7 +27,7 @@ Where data can ba a map, list or keyword list.
 
 Or, you may DataLeafWalker's `map/2` directly (_discouraged_):
 
-```
+```elxir
 DataLeafWalker.map( data, fn( value ) -> ...transform value... end )
 ```
 
@@ -46,7 +46,7 @@ In order to support structs you may either use `DataLeafWalker.map/2`
 or (better) implement `DeeplyEnumerable` for you struct type, most
 often like this:
 
-```
+```elxir
 defimpl DeeplyEnumerable, for: MyStruct do
   def map_deeply( struct, fn_transform ) do
     DataLeafWalker.map( struct, fn_transform )
