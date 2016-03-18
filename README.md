@@ -1,7 +1,7 @@
 # DeeplyEnumerable and DataLeafWalker
 
 Traverse and map values of deeply nested data structures: Provides a
-`map_deeply/2` function for Maps and Lists and Keyword Lists. 
+`map_deeply/2` function for Maps and Lists and Keyword Lists.
 
 rroouugghhllyy based on ideas from Perl's Data::Leaf::Walker
 
@@ -21,11 +21,12 @@ DeeplyEnumerable.map_deeply map, &( &1 + 1 )
 DeeplyEnumerable.map_deeply( data, fn( value ) -> ...transform value... end )
 ```
 
-Where data can ba a map, list or keyword list. 
+Where data can ba a map, list or keyword list.
 
 ## Direct usage of DataLeafWalker
 
 Or, you may DataLeafWalker's `map/2` directly (_discouraged_):
+
 ```
 DataLeafWalker.map( data, fn( value ) -> ...transform value... end )
 ```
