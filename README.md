@@ -72,8 +72,8 @@ The package can be installed as:
 
 ## Todo
 
-- [ ] make keys subject to mappability, too.
-- [x] support structs.
-- [ ] add proper docs
-- [x] really a protocol? _Yes_
-- [ ] add property-based tests. more tests.
+ - [ ] make keys subject to mappability, too.
+ - [x] support structs.
+ - [ ] add proper docs
+ - [x] really a protocol? _Yes_
+ - [ ] add property-based tests. more tests.
